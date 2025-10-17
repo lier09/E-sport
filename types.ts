@@ -1,0 +1,75 @@
+
+export interface ReportData {
+    title: string;
+    subtitle: string;
+    player_name: string;
+    date_info: string;
+    archive_name: string;
+    archive_dob: string;
+    archive_age: string;
+    archive_game: string;
+    core_desc: string;
+    apm_value: string;
+    apm_eval: string;
+    reaction_value: string;
+    reaction_eval: string;
+    mouse_score: string;
+    mouse_eval_value: string;
+    mouse_eval_text: string;
+    health_title_1: string;
+    bmi_value: string;
+    wc_value: string;
+    hc_value: string;
+    body_eval: string;
+    whr_value: string;
+    whr_eval: string;
+    health_title_2: string;
+    hr_value: string;
+    hr_advice: string;
+    bp_value: string;
+    fvc_value: string;
+    health_title_3: string;
+    grip_value: string;
+    grip_eval: string;
+    jump_value: string;
+    jump_eval: string;
+    posture_title_1: string;
+    cervical_joint: string;
+    cervical_flex: string;
+    cervical_ext: string;
+    cervical_lat: string;
+    cervical_eval: string;
+    lumbar_joint: string;
+    lumbar_flex: string;
+    lumbar_ext: string;
+    lumbar_lat: string;
+    lumbar_eval: string;
+    posture_title_2: string;
+    ybt_desc: string;
+    ybt_ant_dir: string;
+    ybt_ant_l: string;
+    ybt_ant_r: string;
+    ybt_ant_diff: string;
+    ybt_ant_risk: string;
+    ybt_pl_dir: string;
+    ybt_pl_l: string;
+    ybt_pl_r: string;
+    ybt_pl_diff: string;
+    ybt_pl_risk: string;
+    ybt_pm_dir: string;
+    ybt_pm_l: string;
+    ybt_pm_r: string;
+    ybt_pm_diff: string;
+    ybt_pm_risk: string;
+    summary_advantage_title: string;
+    summary_advantage_content: string;
+    summary_risk_title: string;
+    summary_risk_content: string;
+    summary_focus_title: string;
+    summary_focus_content: string;
+}
+
+export interface Theme {
+    fontSize: string;
+    accentColor: string;
+}

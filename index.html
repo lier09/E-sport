@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esports Pro Player Analysis Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Variables for dynamic theming */
+        :root {
+            --base-font-size: 16px;
+            --main-accent-color: #008080; /* Default professional teal */
+            --main-accent-color-rgb: 0, 128, 128; /* Default professional teal RGB */
+            --bg-color: #f8f9fa;
+            --card-color: #ffffff;
+            --text-color: #1f2937;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "PingFang SC", "Microsoft YaHei";
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            overflow-x: hidden;
+            font-size: var(--base-font-size);
+        }
+
+        /* Dynamic font sizes based on base-font-size variable */
+        .dynamic-text-lg { font-size: calc(var(--base-font-size) * 1.125); }
+        .dynamic-text-xl { font-size: calc(var(--base-font-size) * 1.25); }
+        .dynamic-text-2xl { font-size: calc(var(--base-font-size) * 1.5); }
+        .dynamic-text-4xl { font-size: calc(var(--base-font-size) * 2.25); }
+        .dynamic-text-5xl { font-size: calc(var(--base-font-size) * 3); }
+
+        /* Dynamic colors based on main-accent-color variable */
+        .text-main-accent { color: var(--main-accent-color); }
+        .border-main-accent { border-color: var(--main-accent-color); }
+        .bg-main-accent { background-color: var(--main-accent-color); }
+        .bg-main-accent-light { background-color: rgba(var(--main-accent-color-rgb), 0.05); }
+
+        /* Editable field styling */
+        [contenteditable="true"] {
+            outline: none;
+            border-bottom: 1px dashed rgba(0, 0, 0, 0.3);
+            cursor: text;
+            padding: 1px 2px;
+            margin: -1px -2px;
+            border-radius: 2px;
+        }
+        [contenteditable="true"]:hover, [contenteditable="true"]:focus {
+            border-bottom: 1px solid var(--main-accent-color);
+            background-color: rgba(var(--main-accent-color-rgb), 0.08);
+        }
+        
+        /* Styles for PDF export preparation */
+        body.is-exporting-pdf [contenteditable="true"] {
+            background-color: transparent !important;
+            border-bottom-color: transparent !important;
+        }
+        body.is-exporting-pdf .data-card, 
+        body.is-exporting-pdf .shadow-md,
+        body.is-exporting-pdf .shadow-lg,
+        body.is-exporting-pdf .shadow-xl,
+        body.is-exporting-pdf .shadow-inner {
+            box-shadow: none !important;
+        }
+        .data-card {
+            background-color: var(--card-color);
+            border: 1px solid #e5e7eb;
+        }
+
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+<div id="root"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

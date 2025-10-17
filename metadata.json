@@ -1,0 +1,5 @@
+{
+  "name": "Esports Pro Player Analysis Dashboard",
+  "description": "A real-time, collaborative dashboard for recording and analyzing the test results of professional esports players. It covers performance metrics, physical health, and provides actionable insights and intervention suggestions.",
+  "requestFramePermissions": []
+}
